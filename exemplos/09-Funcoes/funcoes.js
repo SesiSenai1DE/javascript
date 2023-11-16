@@ -19,7 +19,11 @@ document.write('<h2 style="color: blue;">Função nomeada (Tradicional)</h2><br>
 /* Sintaxe 2 (Tradicional)
 Função nomeada */
 
-// 1ª Digitação (Aqui)
+function exemplo2() {
+    document.write("Função nomeada <br>");
+};
+
+exemplo2();
 
 // ________________________________________________________________________
 
@@ -32,13 +36,27 @@ document.write('<h2 style="color: blue;">Arrow Function (Moderna)</h2><br>');
 Função Seta/Flecha (Arrow Function) */
 
 
-// 2ª Digitação (Aqui)
+let exemplo3 = () => 
+    document.write("Arrow Function <br>");
+
+exemplo3();
 
 
 // _______________________ 3B
 
+// Função para dobrar o valor
+function dobra(valor) {
+    return valor * 2;
+}
 
-// 3ª Digitação (Aqui)
+document.write( dobra(10));
+document.write("<br>");
+
+// Função para dobrar o valor (Sintaxe Arrow Function)
+
+
+
+
 
 
 // ________________________________________________________________________

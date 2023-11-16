@@ -52,9 +52,11 @@ function dobra(valor) {
 document.write( dobra(10));
 document.write("<br>");
 
-// Função para dobrar o valor (Sintaxe Arrow Function)
+// Função para multiplicar o valor (Sintaxe Arrow Function)
 
-
+let dobraB = valor => valor * 300;
+document.write( dobraB(20) );
+document.write("<br>");
 
 
 
@@ -100,8 +102,19 @@ let preco =1250;
 let desconto = 77.88;
 let precoFinal = preco - desconto;
 
+// Formatar para Dolar $
+function formataMoeda(valor) {
+    return valor.toLocaleString ('en', {
+        style:'currency', currency: 'USD'
+    });
+}
 
-// 6ª Digitação (Aqui)
+// Formatar para Real R$ (Sintaxe de Arrow Function)
+let formataValor = valor => {
+    return valor.toLocaleString ('pt-br', {
+        style:'currency', currency: 'BRL'
+    });
+}
 
 
 document.write( formataMoeda(preco) );

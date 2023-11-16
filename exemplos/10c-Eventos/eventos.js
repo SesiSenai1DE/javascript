@@ -8,18 +8,32 @@ const sub01 = pagina.querySelector("#subtitulo-exemplo01");
 
 // Resolução exemplo 1 (Detecção de eventos)
 
+// Função para mostrar a frase (Quando mouse sobre)
+sub01.addEventListener('mouseover', function() {
+    msg.textContent = 'Você passou o mouse sobre...';
+});
 
-
-// 1ª Digitação (Aqui)
+// Função quando o mouse sai
+sub01.addEventListener('mouseout', function() {
+    msg.textContent = '';
+});
 
 
 
 // ____________________________________________________________________________
 // Resolução exemplo 2 (Modo noturno)
 
+const botao = pagina.querySelector("#noturno");
+botao.addEventListener('click', function() {
+    pagina.classList.toggle('modo-noturno');
+    if (botao.textContent == 'Ativar') {
+        botao.textContent = 'Desativar';
+    } else {
+        botao.textContent = 'Ativar'
+    }
+});
 
 
-// 2ª Digitação (Aqui)
 
 
 
@@ -61,10 +75,20 @@ formulario.addEventListener('submit', function(event) {
 
 });
 
+function calculaMedia(nota1 , nota2) {
+    return (nota1 + nota2) / 2;
+}
+
+function verificaSituacao(media) {
+    if (media >=7) {
+        return 'Aprovado';
+    } else {
+        return 'Reprovado';
+    }
+}
 
 
 
-// 3ª Digitação (Aqui)
 
 
 
